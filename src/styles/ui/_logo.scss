@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &_short {
+    background-image: url('../../assets/logo-short.svg');
+  }
+  &_big {
+    background-image: url('../../assets/logo-big.svg');
+  }
+}
