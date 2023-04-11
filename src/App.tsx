@@ -1,4 +1,10 @@
-import React from 'react';
+import { Layout } from './components/layout/Layout';
+import { Router } from './core/router/Router';
+
 export function App() {
-  return <div>app</div>;  
+  return <>
+    <Layout>
+      <Router></Router>
+    </Layout>
+  </>;
 }
