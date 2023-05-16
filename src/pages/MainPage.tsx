@@ -1,35 +1,61 @@
 import { useEffect, useState } from "react";
-import { MovieList } from "../components/blocks/index.d";
-import { MovieData } from "../service/MovieData";
-import { Movie, TrendingTimeWindow, TrendingMovies } from '../service/types'; 
-import { SearchBanner } from "../components/blocks/index.d";
-import { ButtonSwitcher } from "../components/ui/index.d";
+import { MovieListData } from "../service/data/MovieListData";
+import { 
+  Movie, 
+  TrendingTimeWindow, 
+  TrendingMovies, 
+  UIList 
+} from '../service/types'; 
+import { SearchBanner, MainList, ButtonSwitcher } from "../components/index.d";
 
 export function MainPage() {
-  const [ popularMovies, setPopularMovies ] = useState<Movie[]>([]);
+  const [ popularList, setPopularList ] = useState<UIList>([]);
   const [ trendingMovies, setTrendingMovies ] = useState<TrendingMovies>({ day: [], week: [] });
-  const [ upcomingMovies, setUpcomingMovies ] = useState<Movie[]>([]);
+  const [ upcomingList, setUpcomingList ] = useState<UIList>([]);
   const [ trendingPeriod, setTrendingPeriod ] = useState<TrendingTimeWindow>('day');
   
   useEffect(() => {
-    console.log('effect');
-    MovieData.getPopularList().then(list => setPopularMovies(list));
-    MovieData.getTrendingList(trendingPeriod)
-      .then(list => setTrendingMovies(
-        { ...trendingMovies, [trendingPeriod]: list }
-      ));
-    MovieData.getUpcomingList().then(list => setUpcomingMovies(list));
+    MovieListData.getPopularList().then(list =>  {
+      const transformedList = transformToUIList(list);
+      setPopularList(transformedList);
+    });
+    MovieListData.getTrendingList(trendingPeriod)
+      .then(list => {
+        const transformedList = transformToUIList(list);
+        setTrendingMovies( { ...trendingMovies, [trendingPeriod]: transformedList });
+      });
+      MovieListData.getUpcomingList().then(list => {
+      const transformedList = transformToUIList(list);
+      setUpcomingList(transformedList);
+    });
   }, []);
 
   const switchTrendingPeriod = (period: TrendingTimeWindow) => {
     if(period === trendingPeriod) return; 
-    setTrendingPeriod(period);
-    if(trendingMovies[period].length) return; 
-   
-    MovieData.getTrendingList(period)
-      .then(list => setTrendingMovies(
-        { ...trendingMovies, [period]: list }
-      ));
+    if(trendingMovies[period].length) {
+      setTrendingPeriod(period);
+      return;
+    }; 
+    MovieListData.getTrendingList(period)
+      .then(list => {
+        const transformedList = transformToUIList(list);
+        setTrendingMovies(
+        { ...trendingMovies, [period]: transformedList }
+        );
+        setTrendingPeriod(period);
+      });
+  };
+  const transformToUIList = (list: Movie[]) : UIList => {
+    return list.map(({ poster_path, release_date, id,title, vote_average, type }) => {
+      return {
+        poster_path,
+        title, 
+        detail: release_date,
+        vote_average,
+        id,
+        path: `/${type}/${id}`
+      };
+    });
   };
 
   const trendingSwitcher = <div className="buttons-switcher">
@@ -47,20 +73,16 @@ export function MainPage() {
    
   return (
     <div className="homepage">
-      <div className="homepage__search-bnr">
-        <SearchBanner></SearchBanner>
-      </div>
+      <SearchBanner></SearchBanner>
       <div className="container homepage__container">
-        <MovieList list={popularMovies} header={ {title: 'Popular'}}></MovieList>
-        <MovieList 
+        <MainList list={popularList} header={ {title: 'Popular'}}></MainList>
+        <MainList 
           list={trendingMovies[trendingPeriod]} 
           header={{ 
             title: 'Trending', 
             switcher: trendingSwitcher,
-        }}></MovieList>
-        <MovieList list={upcomingMovies} header={ {title: 'Upcoming'}}></MovieList>
-        
-        
+        }}></MainList>
+        <MainList list={upcomingList} header={ { title: 'Upcoming' } }></MainList>       
       </div>
     </div>
   );

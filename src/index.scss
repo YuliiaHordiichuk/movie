@@ -1,14 +1,29 @@
+// main
 @import './styles/main/reset';
 @import './styles/main/global';
 @import './styles/main/vars';
 @import './styles/main/container';
-@import './styles/components/root';
-@import './styles/components/homepage-list';
-@import './styles/components/card';
-@import './styles/components/header';
-@import './styles/components/footer';
-@import './styles/components/homepage';
-@import './styles/components/search-banner';
-@import './styles/components/error-page';
+@import './styles/main/root';
+
+// pages
+@import './styles/pages/homepage';
+@import './styles/pages/person-page';
+@import './styles/pages/error-page';
+@import './styles/pages/movie-page';
+
+// components
+@import './styles/components/header/header';
+@import './styles/components/footer/footer';
+@import './styles/components/banner/search-banner';
+@import './styles/components/banner/movie-banner';
+@import './styles/components/aside/aside-block';
+@import './styles/components/aside/page-aside';
+
+// ui
+@import './styles/ui/typography';
 @import './styles/ui/logo';
-@import './styles/ui/buttons-switcher';
+@import './styles/ui/buttons/buttons-switcher';
+@import './styles/ui/buttons/button-action';
+@import './styles/ui/poster';
+@import './styles/ui/list/main-list';
+@import './styles/ui/card';

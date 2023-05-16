@@ -1,0 +1,40 @@
+.button-action {
+  position: relative;
+  background: $PrimaryColor;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  &_rate {
+    background-image: url('../../../assets/star.svg');
+  }
+  &_favorite {
+    background-image: url('../../../assets/heart.svg');
+  }
+  &__button {
+    width: 46px;
+    height: 46px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover + .button-action__tooltip {
+      opacity: 1;
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    background-color: $PrimaryColor;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 0.15s opacity;
+  }
+}

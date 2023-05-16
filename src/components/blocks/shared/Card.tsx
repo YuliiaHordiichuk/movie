@@ -1,30 +1,28 @@
 import { Link } from "react-router-dom";
+import { Poster } from "./Poster";
 
-type CardProps = {
+interface CardProps {
   id: number,
-  image: string,
+  image: string | null,
   title: string, 
-  detail: string,
-  type: string,
+  detail?: string,
   rate?: number,
   place?: string,
+  path: string,
 };
 
-export function Card({ id, image, title, detail, type, ...props }: CardProps) {
+export function Card({ path, image, title, detail, ...props }: CardProps) {
   const hasRate = typeof props?.rate === 'number';
-  const linkPath = `/${type}/${id}`;
 
   return (
     <Link 
-      to={ linkPath } 
-      state={{ type }} 
+      to={path}
       className={`card card_${ props.place || '' }`} 
     >
-      <img src={image || ''} alt={title}></img>
-      { hasRate && <p className="card__rate">{ props.rate }%</p> }
-      <p className="card__title">{title}</p>
-      <p className="card__detail">{detail}</p>
+      <Poster src={image} title={title}></Poster>
+      { hasRate && <p className="card-rate">{ props.rate }%</p> }
+      <p className="text-600 text-14">{title}</p>
+      <p className="text-400 text-12">{detail}</p>
     </Link>
   );
-  
 }

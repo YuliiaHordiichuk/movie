@@ -1,4 +1,4 @@
-import { Header, Footer } from "./components/blocks/index.d";
+import { Header, Footer } from "./components/index.d";
 import { Outlet } from "react-router-dom";
 
 export function App() {

@@ -1,22 +1,24 @@
-import { MovieApi } from "../api/MovieApi";
-import { imgPath } from "./variables";
-import { Movie } from './types';
-import { RequestConfig, MovieItemApi, TVItemApi } from "../api/types";
-import { TrendingTimeWindow } from '../service/types';
+import { MovieApi } from "../../api/MovieApi";
+import { Movie } from '../types';
+import { 
+  RequestConfig, 
+  MovieItemApi, 
+  TVItemApi, 
+} from "../../api/types";
+import { TrendingTimeWindow } from '../types';
 
-class MovieDataClass {
+class MovieListDataClass {
   private transformMovieList(movie : MovieItemApi) : Movie {
     const { poster_path, overview, release_date, id, title, popularity, vote_average } = movie; 
     return {
       type : "movie",
-      poster_path: `${imgPath}${poster_path}`, 
+      poster_path, 
       overview, 
       release_date, 
       id, 
       title, 
       popularity,
-      vote_average
-
+      vote_average: Math.round(vote_average * 10)
     };
   };
 
@@ -24,13 +26,13 @@ class MovieDataClass {
     const { poster_path, overview, first_air_date, id, name, popularity, vote_average} = tv; 
     return {
       type : "tv",
-      poster_path: `${imgPath}${poster_path}`, 
+      poster_path, 
       release_date: first_air_date,
       title : name,
       overview,
       id,
       popularity,
-      vote_average
+      vote_average: Math.round(vote_average * 10)
 
     };
   };
@@ -55,8 +57,8 @@ class MovieDataClass {
   };
 
   public getTrendingList(period: TrendingTimeWindow, config?: RequestConfig) {
-    const movieList = MovieApi.getTrendingList<MovieItemApi[]>('movie', period,  config);
-    const tvList = MovieApi.getTrendingList<TVItemApi[]>('tv', period,  config);
+    const movieList = MovieApi.getTrendingMovieList(period,  config);
+    const tvList = MovieApi.getTrendingTVList(period,  config);
     return Promise.all([movieList, tvList]).then( ([ movieList, tvList ]) => {
       const transformedMovies = movieList.map(this.transformMovieList);
       const transformedTV = tvList.map(this.transformTvList); 
@@ -65,5 +67,5 @@ class MovieDataClass {
   }
 }
 
-const MovieData = new MovieDataClass();
-export { MovieData };
+const MovieListData = new MovieListDataClass();
+export { MovieListData };
