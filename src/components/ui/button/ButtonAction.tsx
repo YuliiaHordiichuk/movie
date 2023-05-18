@@ -1,19 +1,19 @@
 // todo - update after authorization logic implementation
 interface ButtonActionProps {
-  type: 'favorite' | 'watchlist' | 'rate' | 'list'
+  type: 'favorite' | 'watchlist' | 'rate' | 'list';
 }
 const buttonData = {
   favorite: {
-    text: 'Add to favorites',
+    text: 'Add to favorites'
   },
   rate: {
-    text: 'Rate',
+    text: 'Rate'
   },
   watchlist: {
-    text: 'Add to watchlist',
+    text: 'Add to watchlist'
   },
   list: {
-    text: 'Add to list',
+    text: 'Add to list'
   }
 };
 
@@ -22,5 +22,6 @@ export function ButtonAction({ type }: ButtonActionProps) {
     <div className={`button-action button-action_${type}`}>
       <button type="button" className="button-action__button"></button>
       <div className="button-action__tooltip">{buttonData[type].text}</div>
-    </div>); 
+    </div>
+  );
 }
