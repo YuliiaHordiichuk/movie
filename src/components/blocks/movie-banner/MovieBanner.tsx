@@ -1,5 +1,6 @@
-import { MovieDetails } from '../../../repository/movie/movie.types';
-import { ButtonAction, Poster } from '../../index.d';
+import { MovieDetails } from '../../../repositories/movie/movie.types';
+import { ButtonAction } from '../../ui/button/button-action/ButtonAction';
+import { Poster } from '../../ui/poster/Poster';
 
 interface BannerProps {
   movie: MovieDetails;

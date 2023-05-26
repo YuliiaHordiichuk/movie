@@ -1,5 +1,5 @@
-import { HttpClient, QueryParams } from '../../core/http/index.d';
-import { MovieListResponse } from './movie.types';
+import { HttpClient } from '../../core/http/HttpClient';
+import { MovieListResponse, QueryParams } from './movie.types';
 class MovieListApiClass {
   public getPopular(params?: QueryParams) {
     return HttpClient.get<MovieListResponse>('/movie/popular', params);

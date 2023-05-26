@@ -1,10 +1,5 @@
-import { ReactNode } from 'react';
+import { AsideBlockProps } from './aside-block.types';
 
-interface AsideBlockProps {
-  title: string;
-  subtitle: string;
-  children?: ReactNode;
-}
 export function AsideBlock({ title, subtitle, children }: AsideBlockProps) {
   return (
     <div className="aside-block">

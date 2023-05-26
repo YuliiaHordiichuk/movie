@@ -5,25 +5,28 @@
 @import './styles/main/container';
 @import './styles/main/root';
 
-// pages
-@import './styles/pages/homepage';
-@import './styles/pages/person-page';
-@import './styles/pages/error-page';
-@import './styles/pages/movie-page';
-
-// components
-@import './styles/components/header/header';
-@import './styles/components/footer/footer';
-@import './styles/components/banner/search-banner';
-@import './styles/components/banner/movie-banner';
-@import './styles/components/aside/aside-block';
-@import './styles/components/aside/page-aside';
-
 // ui
 @import './styles/ui/typography';
 @import './styles/ui/logo';
-// @import './styles/ui/buttons/buttons-switcher';
-// @import './styles/ui/buttons/button-action';
-@import './styles/ui/poster';
-@import './styles/ui/list/main-list';
-@import './styles/ui/card';
+
+// pages
+@import './components/pages/main-page/main-page';
+@import './components/pages/person-page/person-page';
+@import './components/pages/error-page/error-page';
+@import './components/pages/movie-page//movie-page';
+
+// layout
+@import './components/layouts/shared/header/header';
+@import './components/layouts/shared/footer/footer';
+
+// blocks
+@import './components/blocks/search-banner/search-banner';
+@import './components/blocks/movie-banner/movie-banner';
+
+// ui components
+@import './components/ui/aside/aside-block';
+@import './components/ui/button/button-action/button-action';
+@import './components/ui/button/button-switcher/button-switcher';
+@import './components/ui/card/card';
+@import './components/ui/poster/poster';
+@import './components/ui/scroll-list/scroll-list';

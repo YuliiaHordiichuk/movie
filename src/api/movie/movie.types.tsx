@@ -1,4 +1,8 @@
 import { ListAPIResponse, Genres, Languages } from '../common.types';
+import type { CreditsAPI } from '../common.types';
+import type { QueryParams } from '../../core/http/http.types';
+
+export { CreditsAPI, QueryParams };
 
 export interface MovieItemAPI {
   poster_path: string;

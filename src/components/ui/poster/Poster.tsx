@@ -1,11 +1,5 @@
 import { ApiConfig } from '../../../configs/api.config';
-
-interface PosterProps {
-  src: string | null;
-  title: string;
-  loading?: 'lazy' | 'eager';
-  classname?: string;
-}
+import { PosterProps } from './poster.types';
 
 export function Poster({ src, title, loading, classname }: PosterProps) {
   if (!src) {

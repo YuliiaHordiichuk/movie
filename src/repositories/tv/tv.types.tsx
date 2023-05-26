@@ -1,25 +1,34 @@
 import {
-  ListAPIResponse,
   Creator,
   Genres,
   Languages,
   LastEpisode,
   SeasonDetails
-} from '../common.types';
+} from '../../api/common.types';
 
-import type { CreditsAPI } from '../common.types';
 import type { QueryParams } from '../../core/http/http.types';
+import type { TrendingTimeWindow, CastItem } from '../common.types';
+import type { TVItemAPI, TVDetailsAPI } from '../../api/tv/tv.types';
+import type { CastAPI } from '../../api/common.types';
 
-export { CreditsAPI, QueryParams };
+export { MEDIA_TYPES, GENDER_TYPES } from '../../configs/movie.config';
+export {
+  QueryParams,
+  TrendingTimeWindow,
+  TVItemAPI,
+  TVDetailsAPI,
+  CastAPI,
+  CastItem
+};
 
-export interface TVItemAPI {
+export interface TV {
   poster_path: string;
   popularity: number;
   id: number;
   backdrop_path: string;
   vote_average: number;
   overview: string;
-  first_air_date: string;
+  first_air_date: Date;
   origin_country: string[];
   genre_ids: number[];
   original_language: string;
@@ -29,11 +38,11 @@ export interface TVItemAPI {
   type: string;
 }
 
-export interface TVDetailsAPI {
+export interface TVDetails {
   backdrop_path: string;
   created_by: Creator[];
   episode_run_time: number[];
-  first_air_date: string;
+  first_air_date: Date;
   genres: Genres[];
   id: number;
   in_production: boolean;
@@ -58,5 +67,3 @@ export interface TVDetailsAPI {
   vote_average: number;
   vote_count: number;
 }
-
-export type TVListResponse = ListAPIResponse<TVItemAPI>;

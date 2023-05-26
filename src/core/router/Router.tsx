@@ -5,7 +5,8 @@
 //   ErrorPage,
 //   PersonPage
 // } from '../../pages/index.d';
-import { MainPage, ErrorPage } from '../../pages/index.d';
+import { MainPage } from '../../components/pages/index.d';
+import { ErrorPage } from '../../components/pages/index.d';
 import { createBrowserRouter } from 'react-router-dom';
 import { Root } from '../../components/Root';
 

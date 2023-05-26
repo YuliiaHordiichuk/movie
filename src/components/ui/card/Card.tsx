@@ -1,15 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Poster } from '../poster/Poster';
-
-interface CardProps {
-  id: number;
-  image: string | null;
-  title: string;
-  detail?: string;
-  rate?: number;
-  place?: string;
-  path: string;
-}
+import { CardProps } from './card.types';
 
 export function Card({ path, image, title, detail, ...props }: CardProps) {
   const hasRate = typeof props?.rate === 'number';
