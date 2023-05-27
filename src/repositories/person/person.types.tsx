@@ -1,7 +1,4 @@
-import type {
-  PersonCreditsCastAPI,
-  PersonDetailsAPI
-} from '../../api/person/person.types';
+import type { PersonCreditsCastAPI, PersonDetailsAPI } from '../../api/person/person.types';
 
 export { GENDER_TYPES } from '../../configs/movie.config';
 export { PersonCreditsCastAPI, PersonDetailsAPI };
@@ -9,7 +6,7 @@ export { PersonCreditsCastAPI, PersonDetailsAPI };
 export interface PersonDetails {
   birthday: Date;
   known_for_department: string;
-  deathday: Date;
+  deathday: Date | null;
   id: number;
   name: string;
   also_known_as: string[];

@@ -83,11 +83,7 @@ class HttpClientClass {
     }
   }
 
-  public async post<T>(
-    path: string,
-    data?: RequestBody,
-    queryParams?: QueryParams
-  ): Promise<T> {
+  public async post<T>(path: string, data?: RequestBody, queryParams?: QueryParams): Promise<T> {
     const config: RequestConfig = {
       method: METHODS.POST,
       queryParams,
@@ -101,11 +97,7 @@ class HttpClientClass {
     }
   }
 
-  public async put<T>(
-    path: string,
-    data?: RequestBody,
-    queryParams?: QueryParams
-  ): Promise<T> {
+  public async put<T>(path: string, data?: RequestBody, queryParams?: QueryParams): Promise<T> {
     const config: RequestConfig = {
       method: METHODS.PUT,
       queryParams,
@@ -118,11 +110,7 @@ class HttpClientClass {
     }
   }
 
-  public async delete<T>(
-    path: string,
-    data?: RequestBody,
-    queryParams?: QueryParams
-  ): Promise<T> {
+  public async delete<T>(path: string, data?: RequestBody, queryParams?: QueryParams): Promise<T> {
     const config: RequestConfig = {
       method: METHODS.DELETE,
       queryParams,

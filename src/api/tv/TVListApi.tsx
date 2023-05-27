@@ -11,10 +11,7 @@ class TVListAPIClass {
   }
 
   public getTrending(time_window: string, params?: QueryParams) {
-    return HttpClient.get<TVListResponse>(
-      `/trending'/tv/${time_window}`,
-      params
-    );
+    return HttpClient.get<TVListResponse>(`/trending/tv/${time_window}`, params);
   }
 }
 

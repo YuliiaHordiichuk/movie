@@ -12,12 +12,11 @@ import {
 class PersonRepositoryClass {
   private transformPersonData(person: PersonDetailsAPI): PersonDetails {
     const age = getAge(new Date(person.birthday));
-    const gender =
-      person.gender === 1 ? GENDER_TYPES.FEMALE : GENDER_TYPES.MALE;
+    const gender = person.gender === 1 ? GENDER_TYPES.FEMALE : GENDER_TYPES.MALE;
     return {
       ...person,
       birthday: new Date(person.birthday),
-      deathday: new Date(person.deathday),
+      deathday: person.deathday ? new Date(person.deathday) : null,
       gender,
       age
     };
@@ -39,5 +38,5 @@ class PersonRepositoryClass {
   }
 }
 
-const Person = new PersonRepositoryClass();
-export { Person };
+const PersonRepository = new PersonRepositoryClass();
+export { PersonRepository };

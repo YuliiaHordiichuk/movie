@@ -1,7 +1,7 @@
 export interface PersonDetailsAPI {
   birthday: string;
   known_for_department: string;
-  deathday: string;
+  deathday: string | null;
   id: number;
   name: string;
   also_known_as: string[];

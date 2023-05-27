@@ -4,22 +4,12 @@ import { UIList } from '../common.types';
 
 import type { QueryParams } from '../../core/http/http.types';
 import type { TrendingTimeWindow, CastItem } from '../common.types';
-import type {
-  MovieItemAPI,
-  MovieDetailsAPI
-} from '../../api/movie/movie.types';
+import type { MovieItemAPI, MovieDetailsAPI } from '../../api/movie/movie.types';
 import type { CastAPI } from '../../api/common.types';
 
 export { MEDIA_TYPES, GENDER_TYPES } from '../../configs/movie.config';
 
-export {
-  QueryParams,
-  TrendingTimeWindow,
-  CastItem,
-  MovieItemAPI,
-  MovieDetailsAPI,
-  CastAPI
-};
+export { QueryParams, TrendingTimeWindow, CastItem, MovieItemAPI, MovieDetailsAPI, CastAPI };
 
 export interface Movie {
   poster_path: string;

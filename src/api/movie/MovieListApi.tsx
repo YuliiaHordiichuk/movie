@@ -10,10 +10,7 @@ class MovieListApiClass {
   }
 
   public getTrending(time_window: string, params?: QueryParams) {
-    return HttpClient.get<MovieListResponse>(
-      `/trending/movie/${time_window}`,
-      params
-    );
+    return HttpClient.get<MovieListResponse>(`/trending/movie/${time_window}`, params);
   }
 }
 

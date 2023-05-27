@@ -1,11 +1,5 @@
 import { MovieListAPI } from '../../api/movie/MovieListApi';
-import {
-  Movie,
-  QueryParams,
-  TrendingTimeWindow,
-  MovieItemAPI,
-  MEDIA_TYPES
-} from './movie.types';
+import { Movie, QueryParams, TrendingTimeWindow, MovieItemAPI, MEDIA_TYPES } from './movie.types';
 
 class MovieListRepositoryClass {
   private transformList(movie: MovieItemAPI): Movie {
@@ -32,10 +26,7 @@ class MovieListRepositoryClass {
       results: transformedList
     };
   }
-  public async getTrending<T extends QueryParams>(
-    time_window: TrendingTimeWindow,
-    config?: T
-  ) {
+  public async getTrending<T extends QueryParams>(time_window: TrendingTimeWindow, config?: T) {
     const movieList = await MovieListAPI.getTrending(time_window, config);
     const transformedList = movieList.results.map(this.transformList);
     return {
