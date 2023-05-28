@@ -12,7 +12,6 @@ class MovieRepositoryClass {
   private transformMovieItem(movie: MovieDetailsAPI): MovieDetails {
     return {
       ...movie,
-      spoken_languages: movie.spoken_languages.map((lang) => lang.name),
       release_date: new Date(movie.release_date),
       runtime: `${Math.floor(movie.runtime / 60)}h ${movie.runtime % 60}m`,
       vote_average: Math.round(movie.vote_average * 10),
