@@ -10,6 +10,7 @@ export function TVPage() {
   const { id } = useParams();
   if (!id) return null;
   const { tv, castList } = useTVPageCtrl(id);
+  const languages = tv?.spoken_languages.map(({ iso_639_1 }) => iso_639_1.toUpperCase()).join(', ');
 
   return (
     <div>
@@ -22,7 +23,7 @@ export function TVPage() {
             </div>
             <div className="page-aside">
               <AsideBlock title="Status" subtitle={tv.status}></AsideBlock>
-              <AsideBlock title="Original Language" subtitle={tv.spoken_languages.join(' ,')} />
+              {languages && <AsideBlock title="Spoken Languages" subtitle={languages} />}
               <AsideBlock title="Original title" subtitle={tv.original_name}></AsideBlock>
             </div>
           </div>

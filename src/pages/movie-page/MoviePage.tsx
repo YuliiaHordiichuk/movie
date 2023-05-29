@@ -10,6 +10,9 @@ export function MoviePage() {
   const { id } = useParams();
   if (!id) return null;
   const { movie, castList } = useMoviePageCtrl(id);
+  const languages = movie?.spoken_languages
+    .map(({ iso_639_1 }) => iso_639_1.toUpperCase())
+    .join(', ');
 
   return (
     <div>
@@ -22,7 +25,7 @@ export function MoviePage() {
             </div>
             <div className="page-aside">
               <AsideBlock title="Status" subtitle={movie.status}></AsideBlock>
-              <AsideBlock title="Original Language" subtitle={movie.spoken_languages.join(' ,')} />
+              {languages && <AsideBlock title="Spoken Languages" subtitle={languages} />}
               <AsideBlock title="Original title" subtitle={movie.original_title}></AsideBlock>
             </div>
           </div>
