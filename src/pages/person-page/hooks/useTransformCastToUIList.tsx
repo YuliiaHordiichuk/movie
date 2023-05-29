@@ -1,4 +1,4 @@
-import { ALIASES, MEDIA_TYPES, PersonCreditsCast, UIList } from '../person-page.types';
+import { ALIASES, MEDIA_TYPES, PersonCreditsCast, UIList } from '../PersonPage.types';
 
 export const useTransformCastToUIList = (credits: PersonCreditsCast[]): UIList => {
   return credits.map((movie) => {

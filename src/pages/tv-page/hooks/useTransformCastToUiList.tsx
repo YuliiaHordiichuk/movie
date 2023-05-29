@@ -1,4 +1,4 @@
-import { ALIASES, CastItem, UIList } from '../tv-page.types';
+import { ALIASES, CastItem, UIList } from '../TVPage.types';
 
 export const useTransformCastToUIList = (cast: CastItem[]): UIList => {
   return cast.map((person) => {

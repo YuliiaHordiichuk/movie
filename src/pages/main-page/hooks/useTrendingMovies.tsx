@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ListAPIResponse, Movie, TrendingTimeWindow } from '../main-page.types';
+import { ListAPIResponse, Movie, TrendingTimeWindow } from '../MainPage.types';
 import { MovieListRepository } from '../../../repositories/movie/MovieListRepository';
 
 export const useTrendingMovies = (initialTimeWindow: TrendingTimeWindow) => {

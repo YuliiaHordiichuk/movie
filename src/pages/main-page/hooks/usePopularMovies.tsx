@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ListAPIResponse, Movie } from '../main-page.types';
+import { ListAPIResponse, Movie } from '../MainPage.types';
 import { MovieListRepository } from '../../../repositories/movie/MovieListRepository';
 
 export const usePopularMovies = () => {

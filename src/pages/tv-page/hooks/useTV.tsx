@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ALIASES, TVDetails } from '../tv-page.types';
+import { ALIASES, TVDetails } from '../TVPage.types';
 import { TVRepository } from '../../../repositories/tv/TVRepository';
 import { useNavigate } from 'react-router-dom';
 

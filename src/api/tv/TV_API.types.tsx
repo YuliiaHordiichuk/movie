@@ -8,7 +8,7 @@ import {
 } from '../common.types';
 
 import type { CreditsAPI } from '../common.types';
-import type { QueryParams } from '../../core/http/http.types';
+import type { QueryParams } from '../../core/http/HttpClient.types';
 
 export { CreditsAPI, QueryParams };
 

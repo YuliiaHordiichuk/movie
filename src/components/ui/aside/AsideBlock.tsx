@@ -1,4 +1,4 @@
-import { AsideBlockProps } from './aside-block.types';
+import { AsideBlockProps } from './AsideBlock.types';
 
 export function AsideBlock({ title, subtitle, children }: AsideBlockProps) {
   return (

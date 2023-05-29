@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import { Header } from './layouts/shared/header/Header';
-import { Footer } from './layouts/shared/footer/Footer';
+import { Header } from '../shared/header/Header';
+import { Footer } from '../shared/footer/Footer';
 
-export function Root() {
+export function Layout() {
   return (
     <>
       <Header />

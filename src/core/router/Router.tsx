@@ -1,12 +1,12 @@
 import { MainPage, MoviePage, PersonPage, TVPage } from '../../pages/index.d';
 import { ErrorPage } from '../../pages/index.d';
 import { createBrowserRouter } from 'react-router-dom';
-import { Root } from '../../components/Root';
+import { Layout } from '../../components/layouts/main/Layout';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {

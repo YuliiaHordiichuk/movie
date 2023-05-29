@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MovieRepository } from '../../../repositories/movie/MovieRepository';
-import { CastItem } from '../movie-page.types';
+import { CastItem } from '../MoviePage.types';
 
 export function useCast(id: string) {
   const [castList, setCastList] = useState<CastItem[]>([]);

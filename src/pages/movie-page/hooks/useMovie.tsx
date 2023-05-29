@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ALIASES, MovieDetails } from '../movie-page.types';
+import { ALIASES, MovieDetails } from '../MoviePage.types';
 import { MovieRepository } from '../../../repositories/movie/MovieRepository';
 import { useNavigate } from 'react-router-dom';
 

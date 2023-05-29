@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { TVRepository } from '../../../repositories/tv/TVRepository';
-import { CastItem } from '../tv-page.types';
+import { CastItem } from '../TVPage.types';
 
 export function useCast(id: string) {
   const [castList, setCastList] = useState<CastItem[]>([]);

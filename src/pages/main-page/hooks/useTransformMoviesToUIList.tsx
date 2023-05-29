@@ -1,4 +1,4 @@
-import { ALIASES, Movie, UIList } from '../main-page.types';
+import { ALIASES, Movie, UIList } from '../MainPage.types';
 
 export const useTransformMoviesToUIList = (movies: Movie[]): UIList => {
   return movies.map((movie) => {

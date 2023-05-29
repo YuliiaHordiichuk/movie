@@ -1,4 +1,4 @@
-import { RequestConfig, QueryParams, RequestBody } from './http.types';
+import { RequestConfig, QueryParams, RequestBody } from './HttpClient.types';
 
 const enum METHODS {
   GET = 'GET',

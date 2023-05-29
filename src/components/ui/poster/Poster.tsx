@@ -1,5 +1,5 @@
 import { ApiConfig } from '../../../configs/api.config';
-import { PosterProps } from './poster.types';
+import { PosterProps } from './Poster.types';
 
 export function Poster({ src, title, loading, classname }: PosterProps) {
   if (!src) {

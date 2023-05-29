@@ -1,8 +1,8 @@
 import { Creator, Genres, Languages, LastEpisode, SeasonDetails } from '../../api/common.types';
 
-import type { QueryParams } from '../../core/http/http.types';
+import type { QueryParams } from '../../core/http/HttpClient.types';
 import type { TrendingTimeWindow, CastItem } from '../common.types';
-import type { TVItemAPI, TVDetailsAPI } from '../../api/tv/tv.types';
+import type { TVItemAPI, TVDetailsAPI } from '../../api/tv/TV_API.types';
 import type { CastAPI } from '../../api/common.types';
 
 export { MEDIA_TYPES, GENDER_TYPES } from '../../configs/movie.config';

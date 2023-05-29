@@ -1,5 +1,5 @@
 import { HttpClient } from '../../core/http/HttpClient';
-import { TVDetailsAPI, CreditsAPI } from './tv.types';
+import { TVDetailsAPI, CreditsAPI } from './TV_API.types';
 
 class TVApiClass {
   public getItem(id: string) {

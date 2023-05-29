@@ -1,10 +1,10 @@
-.movie-banner {
+.page-banner {
   border-bottom: 1px solid $PrimaryColor;
   background-position: center left 100px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.movie-banner-wrap {
+.page-banner-wrap {
   min-height: 300px;
   display: grid;
   grid-template-columns: 300px auto;
@@ -19,7 +19,7 @@
     rgba(31.5, 31.5, 94.5, 0.84) 100%
   );
 }
-.movie-banner-section {
+.page-banner-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -28,12 +28,12 @@
     align-items: center;
   }
 }
-.movie-banner-info {
+.page-banner-info {
   display: grid;
   gap: 20px;
   align-self: flex-start;
 }
-.movie-banner-title {
+.page-banner-title {
   font-size: 35px;
   font-weight: 700;
   display: flex;
@@ -48,7 +48,7 @@
     }
   }
 }
-.movie-banner-info-list {
+.page-banner-info-list {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -57,18 +57,18 @@
   font-weight: 400;
   font-size: 12px;
 }
-.movie-banner-tagline {
+.page-banner-tagline {
   font-size: 14px;
   font-weight: 300;
   opacity: 0.8;
   font-style: italic;
 }
-.movie-banner-subtitle {
+.page-banner-subtitle {
   font-weight: 700;
   font-size: 22px;
   margin: 10px 0;
 }
-.movie-banner-rate {
+.page-banner-rate {
   width: 70px;
   height: 70px;
   display: flex;

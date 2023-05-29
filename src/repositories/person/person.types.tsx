@@ -1,4 +1,4 @@
-import type { PersonCreditsCastAPI, PersonDetailsAPI } from '../../api/person/person.types';
+import type { PersonCreditsCastAPI, PersonDetailsAPI } from '../../api/person/PersonAPI.types';
 
 export { GENDER_TYPES } from '../../configs/movie.config';
 export { PersonCreditsCastAPI, PersonDetailsAPI };

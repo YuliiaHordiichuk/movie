@@ -1,4 +1,4 @@
-import { TRENDING_TIME_WINDOW, TrendingTimeWindow } from '../main-page.types';
+import { TRENDING_TIME_WINDOW, TrendingTimeWindow } from '../MainPage.types';
 import { usePopularMovies } from './usePopularMovies';
 import { usePopularTV } from './usePopularTV';
 import { useTransformMoviesToUIList } from './useTransformMoviesToUIList';

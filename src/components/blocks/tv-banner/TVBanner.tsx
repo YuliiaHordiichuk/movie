@@ -1,5 +1,5 @@
 import { getFormattedDate } from '../../../core/utils/getFormattedDate';
-import { TVDetails } from '../../../repositories/tv/tv.types';
+import { TVDetails } from '../../../repositories/tv/TV.types';
 import { ButtonAction } from '../../ui/button/button-action/ButtonAction';
 import { Poster } from '../../ui/poster/Poster';
 
@@ -14,35 +14,35 @@ export function TVBanner({ tv }: BannerProps) {
 
   return (
     <div
-      className="tv-banner"
+      className="page-banner"
       style={{
         backgroundImage: `url(${tv.backdrop_path})`
       }}
     >
-      <div className="tv-banner-wrap">
+      <div className="page-banner-wrap">
         <Poster src={tv.poster_path} title={tv.name} classname="poster"></Poster>
-        <div className="tv-banner-info">
-          <div className="tv-banner-section">
-            <h1 className="tv-banner-title">
+        <div className="page-banner-info">
+          <div className="page-banner-section">
+            <h1 className="page-banner-title">
               <span>{tv.name}</span>
               <span> ({releaseYear}) </span>
             </h1>
-            <ul className="tv-banner-info-list">
+            <ul className="page-banner-info-list">
               <li>{releaseDate}</li>
               <li>{genresList}</li>
               <li>{tv.number_of_seasons}</li>
             </ul>
           </div>
-          <div className="tv-banner-section is-row">
-            <span className="tv-banner-rate">{tv.vote_average}%</span>
+          <div className="page-banner-section is-row">
+            <span className="page-banner-rate">{tv.vote_average}%</span>
             <span>User Score</span>
 
             <ButtonAction type="favorite"></ButtonAction>
             <ButtonAction type="rate"></ButtonAction>
           </div>
-          <div className="tv-banner-section">
-            <p className="tv-banner-tagline">{tv.tagline}</p>
-            <p className="tv-banner-subtitle">Overview</p>
+          <div className="page-banner-section">
+            <p className="page-banner-tagline">{tv.tagline}</p>
+            <p className="page-banner-subtitle">Overview</p>
             <p className="text-14 text-400">{tv.overview}</p>
           </div>
         </div>

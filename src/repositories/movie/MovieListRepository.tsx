@@ -1,5 +1,5 @@
-import { MovieListAPI } from '../../api/movie/MovieListApi';
-import { Movie, QueryParams, TrendingTimeWindow, MovieItemAPI, MEDIA_TYPES } from './movie.types';
+import { MovieListAPI } from '../../api/movie/MovieListAPI';
+import { Movie, QueryParams, TrendingTimeWindow, MovieItemAPI, MEDIA_TYPES } from './Movie.types';
 
 class MovieListRepositoryClass {
   private transformList(movie: MovieItemAPI): Movie {

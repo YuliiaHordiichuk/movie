@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ALIASES, PersonDetails } from '../person-page.types';
+import { ALIASES, PersonDetails } from '../PersonPage.types';
 import { PersonRepository } from '../../../repositories/person/PersonRepository';
 import { useNavigate } from 'react-router-dom';
 

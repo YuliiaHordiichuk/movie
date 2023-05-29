@@ -1,6 +1,6 @@
 // todo - update after authorization logic implementation
 import { userActions } from '../../../../configs/user-action.config';
-import { ButtonActionProps } from './button-action.types';
+import { ButtonActionProps } from './ButtonAction.types';
 
 export function ButtonAction({ type }: ButtonActionProps) {
   return (

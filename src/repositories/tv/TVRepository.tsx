@@ -1,5 +1,5 @@
 import { TV_API } from '../../api/tv/TV_API';
-import { TVDetails, TVDetailsAPI, GENDER_TYPES, MEDIA_TYPES, CastItem, CastAPI } from './tv.types';
+import { TVDetails, TVDetailsAPI, GENDER_TYPES, MEDIA_TYPES, CastItem, CastAPI } from './TV.types';
 
 class TVRepositoryClass {
   private transformTVItem(tv: TVDetailsAPI): TVDetails {

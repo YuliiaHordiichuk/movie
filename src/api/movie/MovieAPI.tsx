@@ -1,5 +1,5 @@
 import { HttpClient } from '../../core/http/HttpClient';
-import { MovieDetailsAPI, CreditsAPI } from './movie.types';
+import { MovieDetailsAPI, CreditsAPI } from './MovieAPI.types';
 
 class MovieApiClass {
   public getItem(id: string) {

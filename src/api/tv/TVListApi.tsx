@@ -1,5 +1,5 @@
 import { HttpClient } from '../../core/http/HttpClient';
-import { TVListResponse, QueryParams } from './tv.types';
+import { TVListResponse, QueryParams } from './TV_API.types';
 
 class TVListAPIClass {
   public getPopular(params?: QueryParams) {

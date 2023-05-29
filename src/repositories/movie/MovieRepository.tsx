@@ -1,4 +1,4 @@
-import { MovieAPI } from '../../api/movie/MovieItemApi';
+import { MovieAPI } from '../../api/movie/MovieAPI';
 import {
   MovieDetails,
   MovieDetailsAPI,
@@ -6,7 +6,7 @@ import {
   MEDIA_TYPES,
   CastItem,
   CastAPI
-} from './movie.types';
+} from './Movie.types';
 
 class MovieRepositoryClass {
   private transformMovieItem(movie: MovieDetailsAPI): MovieDetails {

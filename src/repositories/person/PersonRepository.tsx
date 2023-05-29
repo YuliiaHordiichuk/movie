@@ -1,4 +1,4 @@
-import { PersonAPI } from '../../api/person/PersonApi';
+import { PersonAPI } from '../../api/person/PersonAPI';
 import { getAge } from '../../core/utils/getAge';
 
 import {
@@ -7,7 +7,7 @@ import {
   PersonCreditsCastAPI,
   PersonDetailsAPI,
   GENDER_TYPES
-} from './person.types';
+} from './Person.types';
 
 class PersonRepositoryClass {
   private transformPersonData(person: PersonDetailsAPI): PersonDetails {

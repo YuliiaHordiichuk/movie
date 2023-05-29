@@ -9,29 +9,30 @@
 @import './styles/ui/typography';
 @import './styles/ui/logo';
 
-// components
+// shared component styles
 @import './styles/components/page-aside';
+@import './styles/components/page-banner';
 
 // pages
-@import './pages/main-page/main-page';
-@import './pages/person-page/person-page';
-@import './pages/error-page/error-page';
-@import './pages/movie-page/movie-page';
-@import './pages/tv-page/tv-page';
+@import './pages/main-page/MainPage';
+@import './pages/person-page/PersonPage';
+@import './pages/error-page/ErrorPage';
+@import './pages/movie-page/MoviePage';
+@import './pages/tv-page/TVPage';
 
 // layout
-@import './components/layouts/shared/header/header';
-@import './components/layouts/shared/footer/footer';
+@import './components/layouts/shared/header/Header';
+@import './components/layouts/shared/footer/Footer';
 
 // blocks
-@import './components/blocks/search-banner/search-banner';
-@import './components/blocks/movie-banner/movie-banner';
-@import './components/blocks/tv-banner/tv-banner';
+@import './components/blocks/search-banner/SearchBanner';
+@import './components/blocks/movie-banner/MovieBanner';
+@import './components/blocks/tv-banner/TVBanner';
 
 // ui components
-@import './components/ui/aside/aside-block';
-@import './components/ui/button/button-action/button-action';
-@import './components/ui/button/button-switcher/button-switcher';
-@import './components/ui/card/card';
-@import './components/ui/poster/poster';
-@import './components/ui/scroll-list/scroll-list';
+@import './components/ui/aside/AsideBlock';
+@import './components/ui/button/button-action/ButtonAction';
+@import './components/ui/button/button-switcher/ButtonSwitcher';
+@import './components/ui/card/Card';
+@import './components/ui/poster/Poster';
+@import './components/ui/scroll-list/ScrollList';

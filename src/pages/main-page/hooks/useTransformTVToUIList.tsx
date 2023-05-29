@@ -1,4 +1,4 @@
-import { ALIASES, TV, UIList } from '../main-page.types';
+import { ALIASES, TV, UIList } from '../MainPage.types';
 
 export const useTransformTVToUIList = (tvs: TV[]): UIList => {
   return tvs.map((tv) => {

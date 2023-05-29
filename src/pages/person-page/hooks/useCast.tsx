@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PersonCreditsCast } from '../person-page.types';
+import { PersonCreditsCast } from '../PersonPage.types';
 import { PersonRepository } from '../../../repositories/person/PersonRepository';
 
 export function useCast(id: string) {

@@ -1,5 +1,5 @@
 import { Card } from '../card/Card';
-import { ListProps } from './scroll-list';
+import { ListProps } from './ScrollList.types';
 
 export function ScrollList({ list, header, modifier }: ListProps) {
   const content = list.map((item) => {

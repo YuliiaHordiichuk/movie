@@ -1,5 +1,5 @@
-import { TVListAPI } from '../../api/tv/TVListApi';
-import { TVItemAPI, QueryParams, TV, TrendingTimeWindow, MEDIA_TYPES } from './tv.types';
+import { TVListAPI } from '../../api/tv/TVListAPI';
+import { TVItemAPI, QueryParams, TV, TrendingTimeWindow, MEDIA_TYPES } from './TV.types';
 
 class TVListRepositoryClass {
   private transformList(tv: TVItemAPI): TV {

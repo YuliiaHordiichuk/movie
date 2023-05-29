@@ -1,5 +1,5 @@
 import { HttpClient } from '../../core/http/HttpClient';
-import { PersonCreditsAPI, PersonDetailsAPI } from './person.types';
+import { PersonCreditsAPI, PersonDetailsAPI } from './PersonAPI.types';
 
 class PersonAPIClass {
   public getDetails(id: string) {

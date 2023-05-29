@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ListAPIResponse, TV } from '../main-page.types';
+import { ListAPIResponse, TV } from '../MainPage.types';
 import { TVListRepository } from '../../../repositories/tv/TVListRepository';
 
 export const usePopularTV = () => {

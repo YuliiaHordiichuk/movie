@@ -1,8 +1,8 @@
 import type { Genres, Languages, CastAPI } from '../../api/common.types';
 import type { UIList, TrendingTimeWindow, CastItem } from '../common.types';
 
-import type { QueryParams } from '../../core/http/http.types';
-import type { MovieItemAPI, MovieDetailsAPI } from '../../api/movie/movie.types';
+import type { QueryParams } from '../../core/http/HttpClient.types';
+import type { MovieItemAPI, MovieDetailsAPI } from '../../api/movie/MovieAPI.types';
 import { MEDIA_TYPES } from '../../configs/movie.config';
 
 export { MEDIA_TYPES, GENDER_TYPES } from '../../configs/movie.config';

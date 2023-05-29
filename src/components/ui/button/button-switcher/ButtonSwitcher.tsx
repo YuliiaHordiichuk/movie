@@ -1,4 +1,4 @@
-import { ButtonSwitcherProps } from './button-switcher.types';
+import { ButtonSwitcherProps } from './ButtonSwitcher.types';
 
 export function ButtonSwitcher({ handleClick, title, active }: ButtonSwitcherProps) {
   return (
