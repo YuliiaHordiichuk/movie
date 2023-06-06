@@ -1,6 +1,6 @@
 # movie app
 
-1. Types
+1. Types 
    Done
 
 - All types are moved to different files. Every class / component has its own \*.types.tsx file which creates new types end re-exports types from other files.
