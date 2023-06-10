@@ -1,5 +1,5 @@
-import { ApiConfig } from '../../../configs/api.config';
-import { PosterProps } from './Poster.types';
+import { config } from '../../../configs/app.config';
+import { PosterProps } from './poster.types';
 
 export function Poster({ src, title, loading, classname }: PosterProps) {
   if (!src) {
@@ -7,7 +7,7 @@ export function Poster({ src, title, loading, classname }: PosterProps) {
   }
   return (
     <img
-      src={`${ApiConfig.imgPath}${src}`}
+      src={`${config.imgPath}${src}`}
       alt={title}
       loading={loading || 'lazy'}
       className={classname || ''}

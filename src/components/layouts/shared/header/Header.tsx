@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ALIASES } from '../../../../configs/aliases.config';
+import { ALIASES } from '../../../../enums/aliases';
 
 export function Header() {
   return (

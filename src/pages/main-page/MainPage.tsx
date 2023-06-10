@@ -1,4 +1,4 @@
-import { TRENDING_TIME_WINDOW } from './MainPage.types';
+import { TRENDING_TIME_WINDOW } from '../../enums/common';
 
 import { ScrollList } from '../../components/ui/scroll-list/ScrollList';
 import { ButtonSwitcher } from '../../components/ui/button/button-switcher/ButtonSwitcher';
