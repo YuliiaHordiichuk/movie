@@ -11,6 +11,7 @@ export function MovieBanner({ movie }: BannerProps) {
   const genresList = movie.genres.map((genre) => genre.name).join(', ');
   const releaseYear = movie.release_date.getFullYear();
   const releaseDate = getFormattedDate(movie.release_date);
+
   return (
     <div
       className="page-banner"

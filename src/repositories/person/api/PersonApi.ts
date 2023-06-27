@@ -1,12 +1,12 @@
-import { HttpClient } from '../../../core/http/HttpClient';
+import { useGet } from '../../../core/http/hooks/useGet';
 import { PersonCreditsAPI, PersonDetailsAPI } from '../Person.types';
 class PersonAPIClass {
   public getDetails(id: string) {
-    return HttpClient.get<PersonDetailsAPI>(`/person/${id}`);
+    return useGet<PersonDetailsAPI>(`/person/${id}`);
   }
 
   public getCredits(id: string) {
-    return HttpClient.get<PersonCreditsAPI>(`/person/${id}/combined_credits`);
+    return useGet<PersonCreditsAPI>(`/person/${id}/combined_credits`);
   }
 }
 

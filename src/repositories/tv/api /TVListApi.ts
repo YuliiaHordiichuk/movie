@@ -1,17 +1,17 @@
-import { HttpClient } from '../../../core/http/HttpClient';
+import { useGet } from '../../../core/http/hooks/useGet';
 import { TVListResponse, QueryParams } from '../TV.types';
 
 class TVListAPIClass {
   public getPopular(params?: QueryParams) {
-    return HttpClient.get<TVListResponse>('/tv/popular', params);
+    return useGet<TVListResponse>('/tv/popular', params);
   }
 
   public getUpcoming(params?: QueryParams) {
-    return HttpClient.get<TVListResponse>('/tv/upcoming', params);
+    return useGet<TVListResponse>('/tv/upcoming', params);
   }
 
   public getTrending(time_window: string, params?: QueryParams) {
-    return HttpClient.get<TVListResponse>(`/trending/tv/${time_window}`, params);
+    return useGet<TVListResponse>(`/trending/tv/${time_window}`, params);
   }
 }
 

@@ -2,6 +2,7 @@ import { Card } from '../card/Card';
 import { ListProps } from './ScrollList.types';
 
 export function ScrollList({ list, header, modifier }: ListProps) {
+  const stub = <div>no items found:(</div>;
   const content = list.map((item) => {
     return (
       <li key={item.id}>
@@ -24,7 +25,7 @@ export function ScrollList({ list, header, modifier }: ListProps) {
         {header.switcher}
       </div>
 
-      <ul className="scroll-list__list">{content}</ul>
+      <ul className="scroll-list__list">{content.length ? content : stub}</ul>
     </div>
   );
 }
