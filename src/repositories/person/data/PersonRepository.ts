@@ -13,6 +13,7 @@ class PersonRepositoryClass {
   private transformPersonData(person: PersonDetailsAPI): PersonDetails {
     const age = getAge(new Date(person.birthday));
     const gender = person.gender === 1 ? GENDER_TYPES.FEMALE : GENDER_TYPES.MALE;
+
     return {
       ...person,
       birthday: new Date(person.birthday),
@@ -30,10 +31,12 @@ class PersonRepositoryClass {
   }
   public async getDetails(id: string) {
     const person = await PersonAPI.getDetails(id);
+
     return this.transformPersonData(person);
   }
   public async getMovieList(id: string) {
     const credits = await PersonAPI.getCredits(id);
+
     return credits.cast.map(this.transformCast);
   }
 }

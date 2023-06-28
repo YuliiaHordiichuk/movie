@@ -1,12 +1,12 @@
-import { useGet } from '../../../core/http/hooks/useGet';
+import { httpClient } from '../../../core/http/HttpClient';
 import { MovieDetailsAPI, CreditsAPI } from '../Movie.types';
 
 class MovieApiClass {
   public getItem(id: string) {
-    return useGet<MovieDetailsAPI>(`/movie/${id}`);
+    return httpClient.get<MovieDetailsAPI>(`/movie/${id}`);
   }
   public getCredits(id: string) {
-    return useGet<CreditsAPI>(`/movie/${id}/credits`);
+    return httpClient.get<CreditsAPI>(`/movie/${id}/credits`);
   }
 }
 

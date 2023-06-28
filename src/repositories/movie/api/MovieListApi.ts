@@ -1,16 +1,16 @@
-import { useGet } from '../../../core/http/hooks/useGet';
+import { httpClient } from '../../../core/http/HttpClient';
 import { MovieListResponse, QueryParams } from '../Movie.types';
 class MovieListApiClass {
   public getPopular(params?: QueryParams) {
-    return useGet<MovieListResponse>('/movie/popular', params);
+    return httpClient.get<MovieListResponse>('/movie/popular', params);
   }
 
   public getUpcoming(params?: QueryParams) {
-    return useGet<MovieListResponse>('/movie/upcoming', params);
+    return httpClient.get<MovieListResponse>('/movie/upcoming', params);
   }
 
   public getTrending(time_window: string, params?: QueryParams) {
-    return useGet<MovieListResponse>(`/trending/movie/${time_window}`, params);
+    return httpClient.get<MovieListResponse>(`/trending/movie/${time_window}`, params);
   }
 }
 

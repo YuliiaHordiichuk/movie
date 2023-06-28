@@ -21,6 +21,7 @@ class MovieRepositoryClass {
 
   private transformCast(item: CastAPI): CastItem {
     const gender = item.gender === 1 ? GENDER_TYPES.FEMALE : GENDER_TYPES.MALE;
+
     return {
       ...item,
       gender
@@ -29,11 +30,13 @@ class MovieRepositoryClass {
 
   public async getDetails(id: string) {
     const movie = await MovieAPI.getItem(id);
+
     return this.transformMovieItem(movie);
   }
 
   public async getCast(id: string) {
     const credits = await MovieAPI.getCredits(id);
+
     return credits.cast.map(this.transformCast);
   }
 }

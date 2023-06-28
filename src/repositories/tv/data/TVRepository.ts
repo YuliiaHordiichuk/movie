@@ -13,6 +13,7 @@ class TVRepositoryClass {
 
   private transformCast(item: CastAPI): CastItem {
     const gender = item.gender === 1 ? GENDER_TYPES.FEMALE : GENDER_TYPES.MALE;
+
     return {
       ...item,
       gender
@@ -21,11 +22,13 @@ class TVRepositoryClass {
 
   public async getDetails(id: string) {
     const TV = await TV_API.getItem(id);
+
     return this.transformTVItem(TV);
   }
 
   public async getCast(id: string) {
     const credits = await TV_API.getCredits(id);
+
     return credits.cast.map(this.transformCast);
   }
 }

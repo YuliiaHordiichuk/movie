@@ -1,21 +1,50 @@
-import { config as appConfig } from '../../configs/app.config';
+import { config } from '../../configs/app.config';
 import { createSearchParams } from '../utils/createSearchParams';
-import { QueryParams } from './HttpClient.types';
+import { Method, QueryParams } from './HttpClient.types';
 import { API_METHODS } from './enums';
-import { AxiosRequestConfig } from 'axios';
-import { useAxiosRequest } from './hooks/useAxiosRequest';
+import axios, { AxiosError, AxiosRequestConfig } from 'axios';
+import { handleError } from './handleError';
 
-export class HttpClient {
-  private request = useAxiosRequest;
+axios.defaults.headers.common['Authorization'] = config.authToken;
+axios.interceptors.response.use(
+  function (response) {
+    return response;
+  },
+  function (error: AxiosError) {
+    handleError(error);
+
+    return Promise.reject(error);
+  }
+);
+class HttpClientClass {
+  private async request<T>(
+    method: Method,
+    endpoint: string,
+    data?: AxiosRequestConfig
+  ): Promise<T> {
+    try {
+      let response;
+      if (data) {
+        response = await axios[method]<T>(endpoint, data);
+      } else {
+        response = await axios[method]<T>(endpoint);
+      }
+
+      return response.data;
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
 
   private getEndpoint(path: string, queryParams?: QueryParams): string {
-    const { baseApiUrl } = appConfig;
     const formattedQueryParams = createSearchParams(queryParams);
-    return `${baseApiUrl}${path}${formattedQueryParams}`;
+
+    return `${config.baseApiUrl}${path}${formattedQueryParams}`;
   }
 
   public async get<T>(path: string, queryParams?: QueryParams): Promise<T> {
     const endpoint = this.getEndpoint(path, queryParams);
+
     return this.request(API_METHODS.GET, endpoint);
   }
 
@@ -25,6 +54,7 @@ export class HttpClient {
     queryParams?: QueryParams
   ): Promise<T> {
     const endpoint = this.getEndpoint(path, queryParams);
+
     return this.request(API_METHODS.POST, endpoint, data);
   }
 
@@ -34,6 +64,7 @@ export class HttpClient {
     queryParams?: QueryParams
   ): Promise<T> {
     const endpoint = this.getEndpoint(path, queryParams);
+
     return this.request(API_METHODS.PUT, endpoint, data);
   }
 
@@ -43,6 +74,10 @@ export class HttpClient {
     queryParams?: QueryParams
   ): Promise<T> {
     const endpoint = this.getEndpoint(path, queryParams);
+
     return this.request(API_METHODS.DELETE, endpoint, data);
   }
 }
+
+const httpClient = new HttpClientClass();
+export { httpClient };

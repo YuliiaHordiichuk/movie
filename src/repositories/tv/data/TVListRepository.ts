@@ -13,6 +13,7 @@ class TVListRepositoryClass {
   public async getPopular<T extends QueryParams>(config?: T) {
     const TVList = await TVListAPI.getPopular(config);
     const transformedList = TVList.results.map(this.transformList);
+
     return {
       ...TVList,
       results: transformedList
@@ -21,6 +22,7 @@ class TVListRepositoryClass {
   public async getTrending<T extends QueryParams>(time_window: TrendingTimeWindow, config?: T) {
     const TVList = await TVListAPI.getTrending(time_window, config);
     const transformedList = TVList.results.map(this.transformList);
+
     return {
       ...TVList,
       results: transformedList

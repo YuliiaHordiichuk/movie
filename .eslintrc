@@ -9,6 +9,7 @@
     "prettier"
   ],
   "rules": {
+    "newline-before-return": 2,
     "semi": [2, "always"],
     "quotes": [
       2,

@@ -13,6 +13,7 @@ class MovieListRepositoryClass {
   public async getPopular<T extends QueryParams>(config?: T) {
     const movieList = await MovieListAPI.getPopular(config);
     const transformedList = movieList.results.map(this.transformList);
+
     return {
       ...movieList,
       results: transformedList
@@ -21,6 +22,7 @@ class MovieListRepositoryClass {
   public async getUpcoming<T extends QueryParams>(config?: T) {
     const movieList = await MovieListAPI.getUpcoming(config);
     const transformedList = movieList.results.map(this.transformList);
+
     return {
       ...movieList,
       results: transformedList
@@ -29,6 +31,7 @@ class MovieListRepositoryClass {
   public async getTrending<T extends QueryParams>(time_window: TrendingTimeWindow, config?: T) {
     const movieList = await MovieListAPI.getTrending(time_window, config);
     const transformedList = movieList.results.map(this.transformList);
+
     return {
       ...movieList,
       results: transformedList

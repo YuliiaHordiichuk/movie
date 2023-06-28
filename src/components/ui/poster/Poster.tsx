@@ -5,6 +5,7 @@ export function Poster({ src, title, loading, classname }: PosterProps) {
   if (!src) {
     return <div className="poster-stub"></div>;
   }
+
   return (
     <img
       src={`${config.imgPath}${src}`}
