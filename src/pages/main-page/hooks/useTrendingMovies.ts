@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ListAPIResponse, Movie, TrendingTimeWindow } from '../MainPage.types';
-import { MovieListRepository } from '../../../repositories/movie/data/MovieListRepository';
+import { MovieListRepository } from '../../../domain/movie/repository/MovieListRepository';
 
 export const useTrendingMovies = (initialTimeWindow: TrendingTimeWindow) => {
   // to do - do not send request after every switch => keep data for both time windows

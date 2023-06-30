@@ -1,6 +1,7 @@
 import { MEDIA_TYPES } from '../../../enums/common';
 import { ALIASES } from '../../../enums/aliases';
-import { PersonCreditsCast, UIList } from '../PersonPage.types';
+import { PersonCreditsCast } from '../Person.types';
+import { UIList } from '../../common.types';
 
 export const useTransformCastToUIList = (credits: PersonCreditsCast[]): UIList => {
   return credits.map((movie) => {

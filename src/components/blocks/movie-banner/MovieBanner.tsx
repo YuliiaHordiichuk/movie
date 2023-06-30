@@ -1,5 +1,5 @@
 import { getFormattedDate } from '../../../core/utils/getFormattedDate';
-import { MovieDetails } from '../../../repositories/movie/Movie.types';
+import { MovieDetails } from '../../../domain/movie/Movie.types';
 import { ButtonAction } from '../../ui/button/button-action/ButtonAction';
 import { Poster } from '../../ui/poster/Poster';
 

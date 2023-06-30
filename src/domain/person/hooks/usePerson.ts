@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PersonDetails } from '../PersonPage.types';
-import { PersonRepository } from '../../../repositories/person/data/PersonRepository';
+import { PersonDetails } from '../Person.types';
+import { PersonRepository } from '../repository/PersonRepository';
 import { ALIASES } from '../../../enums/aliases';
 
 export function usePerson(id: string) {

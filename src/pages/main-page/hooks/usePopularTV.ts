@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ListAPIResponse, TV } from '../MainPage.types';
-import { TVListRepository } from '../../../repositories/tv/data/TVListRepository';
+import { TVListRepository } from '../../../domain/tv/repository/TVListRepository';
 
 export const usePopularTV = () => {
   const [moviesData, setMoviesData] = useState<ListAPIResponse<TV>>({

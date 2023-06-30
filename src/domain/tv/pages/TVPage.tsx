@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-import { TVBanner } from '../../components/blocks/tv-banner/TVBanner';
-import { AsideBlock } from '../../components/ui/aside/AsideBlock';
-import { ScrollList } from '../../components/ui/scroll-list/ScrollList';
+import { TVBanner } from '../../../components/blocks/tv-banner/TVBanner';
+import { AsideBlock } from '../../../components/ui/aside/AsideBlock';
+import { ScrollList } from '../../../components/ui/scroll-list/ScrollList';
 
-import { useTVPageCtrl } from './hooks/useTVPageCtrl';
+import { useTVPageCtrl } from '../hooks/useTVPageCtrl';
 
 export function TVPage() {
   const { id } = useParams();

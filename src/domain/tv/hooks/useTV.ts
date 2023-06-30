@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { TVRepository } from '../../../repositories/tv/data/TVRepository';
+import { TVRepository } from '../repository/TVRepository';
 
-import { TVDetails } from '../TVPage.types';
+import { TVDetails } from '../TV.types';
 import { ALIASES } from '../../../enums/aliases';
 
 export function useTV(id: string) {

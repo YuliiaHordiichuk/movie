@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-import { MovieBanner } from '../../components/blocks/movie-banner/MovieBanner';
-import { AsideBlock } from '../../components/ui/aside/AsideBlock';
-import { ScrollList } from '../../components/ui/scroll-list/ScrollList';
+import { MovieBanner } from '../../../components/blocks/movie-banner/MovieBanner';
+import { AsideBlock } from '../../../components/ui/aside/AsideBlock';
+import { ScrollList } from '../../../components/ui/scroll-list/ScrollList';
 
-import { useMoviePageCtrl } from './hooks/useMoviePageCtrl';
+import { useMoviePageCtrl } from '../hooks/useMoviePageCtrl';
 
 export function MoviePage() {
   const { id } = useParams();

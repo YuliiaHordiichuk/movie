@@ -23,12 +23,7 @@ class HttpClientClass {
     data?: AxiosRequestConfig
   ): Promise<T> {
     try {
-      let response;
-      if (data) {
-        response = await axios[method]<T>(endpoint, data);
-      } else {
-        response = await axios[method]<T>(endpoint);
-      }
+      const response = await axios[method]<T>(endpoint, data);
 
       return response.data;
     } catch (error) {

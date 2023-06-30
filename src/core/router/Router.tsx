@@ -1,7 +1,10 @@
-import { MainPage, MoviePage, PersonPage, TVPage } from '../../pages/index.d';
-import { ErrorPage } from '../../pages/index.d';
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../../components/layouts/main/Layout';
+import { MoviePage } from '../../domain/movie/pages/MoviePage';
+import { PersonPage } from '../../domain/person/pages/PersonPage';
+import { TVPage } from '../../domain/tv/pages/TVPage';
+import { MainPage } from '../../pages/main-page/MainPage';
+import { ErrorPage } from '../../pages/error-page/ErrorPage';
 
 export const router = createBrowserRouter([
   {

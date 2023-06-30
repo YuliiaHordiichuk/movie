@@ -15,10 +15,11 @@
 
 // pages
 @import './pages/main-page/MainPage';
-@import './pages/person-page/PersonPage';
 @import './pages/error-page/ErrorPage';
-@import './pages/movie-page/MoviePage';
-@import './pages/tv-page/TVPage';
+
+@import './domain/person/styles/PersonPage';
+@import './domain/movie/styles/MoviePage.scss';
+@import './domain/tv/styles/TVPage';
 
 // layout
 @import './components/layouts/shared/header/Header';

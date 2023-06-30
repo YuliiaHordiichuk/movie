@@ -1,4 +1,5 @@
-import { CastItem, UIList } from '../TVPage.types';
+import { CastItem } from '../TV.types';
+import { UIList } from '../../common.types';
 import { ALIASES } from '../../../enums/aliases';
 
 export const useTransformCastToUIList = (cast: CastItem[]): UIList => {

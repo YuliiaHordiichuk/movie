@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { MovieRepository } from '../../../repositories/movie/data/MovieRepository';
+import { MovieRepository } from '../repository/MovieRepository';
 
-import { MovieDetails } from '../MoviePage.types';
+import { MovieDetails } from '../Movie.types';
 import { ALIASES } from '../../../enums/aliases';
 
 export function useMovie(id: string) {

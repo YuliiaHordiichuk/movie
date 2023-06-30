@@ -1,4 +1,4 @@
-import { CastItem, UIList } from '../MoviePage.types';
+import { CastItem, UIList } from '../Movie.types';
 import { ALIASES } from '../../../enums/aliases';
 
 export const useTransformCastToUIList = (cast: CastItem[]): UIList => {

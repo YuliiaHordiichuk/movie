@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 
-import { ScrollList } from '../../components/ui/scroll-list/ScrollList';
-import { Poster } from '../../components/ui/poster/Poster';
-import { AsideBlock } from '../../components/ui/aside/AsideBlock';
+import { ScrollList } from '../../../components/ui/scroll-list/ScrollList';
+import { Poster } from '../../../components/ui/poster/Poster';
+import { AsideBlock } from '../../../components/ui/aside/AsideBlock';
 
-import { getFormattedDate } from '../../core/utils/getFormattedDate';
-import { usePersonPageCtrl } from './hooks/usePersonPageCtrl';
+import { getFormattedDate } from '../../../core/utils/getFormattedDate';
+import { usePersonPageCtrl } from '../hooks/usePersonPageCtrl';
 
 export function PersonPage() {
   const { id } = useParams();

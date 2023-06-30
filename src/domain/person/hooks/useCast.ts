@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { PersonCreditsCast } from '../PersonPage.types';
-import { PersonRepository } from '../../../repositories/person/data/PersonRepository';
+import { PersonCreditsCast } from '../Person.types';
+import { PersonRepository } from '../repository/PersonRepository';
 
 export function useCast(id: string) {
   const [movies, setMovies] = useState<PersonCreditsCast[]>([]);

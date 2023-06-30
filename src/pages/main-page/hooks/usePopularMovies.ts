@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ListAPIResponse, Movie } from '../MainPage.types';
-import { MovieListRepository } from '../../../repositories/movie/data/MovieListRepository';
+import { MovieListRepository } from '../../../domain/movie/repository/MovieListRepository';
 
 export const usePopularMovies = () => {
   const [moviesData, setMoviesData] = useState<ListAPIResponse<Movie>>({

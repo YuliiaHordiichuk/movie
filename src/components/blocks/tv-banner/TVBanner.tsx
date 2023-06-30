@@ -1,5 +1,5 @@
 import { getFormattedDate } from '../../../core/utils/getFormattedDate';
-import { TVDetails } from '../../../repositories/tv/TV.types';
+import { TVDetails } from '../../../domain/tv/TV.types';
 import { ButtonAction } from '../../ui/button/button-action/ButtonAction';
 import { Poster } from '../../ui/poster/Poster';
 
