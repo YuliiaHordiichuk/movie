@@ -1,7 +1,7 @@
-import { getFormattedDate } from '../../../core/utils/getFormattedDate';
-import { TVDetails } from '../../../domain/tv/TV.types';
-import { ButtonAction } from '../../ui/button/button-action/ButtonAction';
-import { Poster } from '../../ui/poster/Poster';
+import { getFormattedDate } from '../../../../core/utils/getFormattedDate';
+import { TVDetails } from '../../TV.types';
+import { ButtonAction } from '../../../../components/ui/button/button-action/ButtonAction';
+import { Poster } from '../../../../components/ui/poster/Poster';
 
 interface BannerProps {
   tv: TVDetails;

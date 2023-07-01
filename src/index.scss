@@ -27,9 +27,8 @@
 
 // blocks
 @import './components/blocks/search-banner/SearchBanner';
-@import './components/blocks/movie-banner/MovieBanner';
-@import './components/blocks/tv-banner/TVBanner';
-
+@import './domain/movie/styles/MovieBanner.scss';
+@import './domain/tv/styles/TVBanner.scss';
 // ui components
 @import './components/ui/aside/AsideBlock';
 @import './components/ui/button/button-action/ButtonAction';

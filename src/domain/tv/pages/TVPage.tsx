@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { TVBanner } from '../../../components/blocks/tv-banner/TVBanner';
+import { TVBanner } from '../components/tv-banner/TVBanner';
 import { AsideBlock } from '../../../components/ui/aside/AsideBlock';
 import { ScrollList } from '../../../components/ui/scroll-list/ScrollList';
 

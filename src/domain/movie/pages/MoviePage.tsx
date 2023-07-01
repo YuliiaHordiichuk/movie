@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { MovieBanner } from '../../../components/blocks/movie-banner/MovieBanner';
+import { MovieBanner } from '../components/movie-banner/MovieBanner';
 import { AsideBlock } from '../../../components/ui/aside/AsideBlock';
 import { ScrollList } from '../../../components/ui/scroll-list/ScrollList';
 
