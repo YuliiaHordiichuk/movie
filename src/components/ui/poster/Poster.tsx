@@ -1,4 +1,4 @@
-import { config } from '../../../configs/app.config';
+import { getImageSource } from '../../../core/utils/getImageSource';
 import { PosterProps } from './Poster.types';
 
 export function Poster({ src, title, loading, classname }: PosterProps) {
@@ -6,9 +6,11 @@ export function Poster({ src, title, loading, classname }: PosterProps) {
     return <div className="poster-stub"></div>;
   }
 
+  const imageSource = getImageSource(src);
+
   return (
     <img
-      src={`${config.imgPath}${src}`}
+      src={imageSource}
       alt={title}
       loading={loading || 'lazy'}
       className={classname || ''}

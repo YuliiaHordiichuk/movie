@@ -1,11 +1,10 @@
-import { config } from '../../configs/app.config';
 import { createSearchParams } from '../utils/createSearchParams';
 import { Method, QueryParams } from './HttpClient.types';
 import { API_METHODS } from './enums';
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import { handleError } from './handleError';
 
-axios.defaults.headers.common['Authorization'] = config.authToken;
+axios.defaults.headers.common['Authorization'] = process.env.REACT_APP_AUTH_TOKEN;
 axios.interceptors.response.use(
   function (response) {
     return response;
@@ -34,7 +33,7 @@ class HttpClientClass {
   private getEndpoint(path: string, queryParams?: QueryParams): string {
     const formattedQueryParams = createSearchParams(queryParams);
 
-    return `${config.baseApiUrl}${path}${formattedQueryParams}`;
+    return `${process.env.REACT_APP_API_URL}${path}${formattedQueryParams}`;
   }
 
   public async get<T>(path: string, queryParams?: QueryParams): Promise<T> {
