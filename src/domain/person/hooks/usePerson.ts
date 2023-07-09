@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PersonDetails } from '../Person.types';
 import { PersonRepository } from '../repository/PersonRepository';
-import { ALIASES } from '../../../enums/aliases';
+import { ROUTES } from '../../../core/router/routes';
 
 export function usePerson(id: string) {
   const [person, setPerson] = useState<PersonDetails>();
@@ -15,7 +15,7 @@ export function usePerson(id: string) {
         setPerson(response);
       } catch (error) {
         console.error('Error occurred:', error);
-        navigate(ALIASES.NOT_FOUND);
+        navigate(`${ROUTES.NOT_FOUND}`);
       }
     }
 

@@ -1,5 +1,5 @@
+import { MOVIE_ROUTES } from '../../../domain/movie/navigation/movie-routes';
 import { Movie, UIList } from '../MainPage.types';
-import { ALIASES } from '../../../enums/aliases';
 
 export const useTransformMoviesToUIList = (movies: Movie[]): UIList => {
   return movies.map((movie) => {
@@ -9,7 +9,7 @@ export const useTransformMoviesToUIList = (movies: Movie[]): UIList => {
       detail: movie.release_date.toLocaleDateString(),
       vote_average: movie.vote_average,
       id: movie.id,
-      path: `${ALIASES.MOVIE}/${movie.id}`
+      path: `${MOVIE_ROUTES.MOVIE}/${movie.id}`
     };
   });
 };

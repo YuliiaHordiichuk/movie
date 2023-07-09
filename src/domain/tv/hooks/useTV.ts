@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { TVRepository } from '../repository/TVRepository';
 
 import { TVDetails } from '../TV.types';
-import { ALIASES } from '../../../enums/aliases';
+import { ROUTES } from '../../../core/router/routes';
 
 export function useTV(id: string) {
   const [tv, setTV] = useState<TVDetails>();
@@ -17,7 +17,7 @@ export function useTV(id: string) {
         setTV(response);
       } catch (error) {
         console.error('Error occurred:', error);
-        navigate(ALIASES.NOT_FOUND);
+        navigate(`${ROUTES.NOT_FOUND}`);
       }
     }
 

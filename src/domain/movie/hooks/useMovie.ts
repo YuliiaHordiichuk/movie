@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { MovieRepository } from '../repository/MovieRepository';
 
 import { MovieDetails } from '../Movie.types';
-import { ALIASES } from '../../../enums/aliases';
+import { ROUTES } from '../../../core/router/routes';
 
 export function useMovie(id: string) {
   const [movie, setMovie] = useState<MovieDetails>();
@@ -17,7 +17,7 @@ export function useMovie(id: string) {
         setMovie(response);
       } catch (error) {
         console.error('Error occurred:', error);
-        navigate(ALIASES.NOT_FOUND);
+        navigate(`${ROUTES.NOT_FOUND}`);
       }
     }
 

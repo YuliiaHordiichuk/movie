@@ -1,6 +1,6 @@
 import { CastItem } from '../TV.types';
 import { UIList } from '../../common.types';
-import { ALIASES } from '../../../enums/aliases';
+import { PERSON_ROUTES } from '../../person/navigation/person-routes';
 
 export const useTransformCastToUIList = (cast: CastItem[]): UIList => {
   return cast.map((person) => {
@@ -9,7 +9,7 @@ export const useTransformCastToUIList = (cast: CastItem[]): UIList => {
       title: person.name,
       detail: person.character,
       id: person.id,
-      path: `${ALIASES.PERSON}/${person.id}`
+      path: `${PERSON_ROUTES.PERSON}/${person.id}`
     };
   });
 };

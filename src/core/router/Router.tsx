@@ -1,37 +1,25 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../../components/layouts/main/Layout';
-import { MoviePage } from '../../domain/movie/pages/MoviePage';
-import { PersonPage } from '../../domain/person/pages/PersonPage';
-import { TVPage } from '../../domain/tv/pages/TVPage';
 import { MainPage } from '../../pages/main-page/MainPage';
 import { ErrorPage } from '../../pages/error-page/ErrorPage';
 
+import { movieRoutes } from '../../domain/movie/navigation/movie-routing';
+import { personRoutes } from '../../domain/person/navigation/person-routing';
+import { TVRoutes } from '../../domain/tv/navigation/tv-routing';
+import { ROUTES } from './routes';
+
 export const router = createBrowserRouter([
   {
-    path: '/',
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        path: ROUTES.HOME,
         element: <MainPage />
       },
-      {
-        path: '/movie/:id',
-        element: <MoviePage />
-      },
-      {
-        path: '/tv/:id',
-        element: <TVPage />
-      },
-      {
-        path: '/person/:id',
-        element: <PersonPage />
-      }
+      ...TVRoutes,
+      ...personRoutes,
+      ...movieRoutes
     ]
-  },
-  {
-    path: '*',
-    element: <ErrorPage />
   }
 ]);
