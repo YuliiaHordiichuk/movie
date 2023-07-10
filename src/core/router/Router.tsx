@@ -3,9 +3,9 @@ import { Layout } from '../../components/layouts/main/Layout';
 import { MainPage } from '../../pages/main-page/MainPage';
 import { ErrorPage } from '../../pages/error-page/ErrorPage';
 
-import { movieRoutes } from '../../domain/movie/navigation/movie-routing';
-import { personRoutes } from '../../domain/person/navigation/person-routing';
-import { TVRoutes } from '../../domain/tv/navigation/tv-routing';
+import { movieRouting } from '../../domain/movie/navigation/movie-routing';
+import { personRouting } from '../../domain/person/navigation/person-routing';
+import { TVRouting } from '../../domain/tv/navigation/tv-routing';
 import { ROUTES } from './routes';
 
 export const router = createBrowserRouter([
@@ -17,9 +17,9 @@ export const router = createBrowserRouter([
         path: ROUTES.HOME,
         element: <MainPage />
       },
-      ...TVRoutes,
-      ...personRoutes,
-      ...movieRoutes
+      ...TVRouting,
+      ...personRouting,
+      ...movieRouting
     ]
   }
 ]);
