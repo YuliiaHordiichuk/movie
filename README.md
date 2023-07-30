@@ -5,7 +5,4 @@
 3. add rule for new line before return statement
 4. separate navigation to features and dynamically create router
 5. aliases to routes
-6. axios response and error handling
-
-7. how to create enum for routes if routing is created locally but enums has to be used everywhere
-8. how create routes if not as object
+6. axios response and error handling (no separation for request method)

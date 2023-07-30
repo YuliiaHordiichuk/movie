@@ -1,18 +1,16 @@
 import { createSearchParams } from '../utils/createSearchParams';
 import { Method, QueryParams } from './HttpClient.types';
 import { API_METHODS } from './enums';
-import axios, { AxiosError, AxiosRequestConfig } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { handleError } from './handleError';
 
 axios.defaults.headers.common['Authorization'] = process.env.REACT_APP_AUTH_TOKEN;
 axios.interceptors.response.use(
-  function (response) {
+  function (response: AxiosResponse) {
     return response;
   },
   function (error: AxiosError) {
     handleError(error);
-
-    return Promise.reject(error);
   }
 );
 class HttpClientClass {
@@ -21,13 +19,9 @@ class HttpClientClass {
     endpoint: string,
     data?: AxiosRequestConfig
   ): Promise<T> {
-    try {
-      const response = await axios[method]<T>(endpoint, data);
+    const response = await axios[method]<T>(endpoint, data);
 
-      return response.data;
-    } catch (error) {
-      throw new Error(error);
-    }
+    return response.data;
   }
 
   private getEndpoint(path: string, queryParams?: QueryParams): string {

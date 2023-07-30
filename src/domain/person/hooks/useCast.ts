@@ -11,7 +11,7 @@ export function useCast(id: string) {
         const response = await PersonRepository.getMovieList(id);
         setMovies(response);
       } catch (error) {
-        console.error('Error occurred:', error);
+        // console.error('Error occurred:', error);
       }
     }
 

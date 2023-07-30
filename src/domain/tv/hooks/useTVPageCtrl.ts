@@ -1,11 +1,11 @@
-import { useCast } from './useCast';
+import { useTVCast } from './useTVCast';
 import { useTV } from './useTV';
-import { useTransformCastToUIList } from './useTransformCastToUiList';
+import { useTransformTVCastToUIList } from './useTransformCastToUiList';
 
 export function useTVPageCtrl(id: string) {
   const tv = useTV(id);
-  const cast = useCast(id);
-  const castList = useTransformCastToUIList(cast);
+  const cast = useTVCast(id);
+  const castList = useTransformTVCastToUIList(cast);
 
   return {
     tv,

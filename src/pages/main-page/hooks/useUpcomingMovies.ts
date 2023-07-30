@@ -16,7 +16,7 @@ export const useUpcomingMovies = () => {
         const response = await MovieListRepository.getUpcoming();
         setMoviesData(response);
       } catch (error) {
-        console.error('Error occurred:', error);
+        // console.error('Error occurred:', error);
       }
     }
     fetchMovies();

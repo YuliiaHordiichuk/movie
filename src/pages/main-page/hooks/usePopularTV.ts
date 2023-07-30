@@ -16,7 +16,7 @@ export const usePopularTV = () => {
         const response = await TVListRepository.getPopular();
         setMoviesData(response);
       } catch (error) {
-        console.error('Error occurred:', error);
+        // console.error('Error occurred:', error);
       }
     }
 

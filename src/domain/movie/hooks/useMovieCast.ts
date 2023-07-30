@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
-import { TVRepository } from '../repository/TVRepository';
-import { CastItem } from '../TV.types';
+import { MovieRepository } from '../repository/MovieRepository';
+import { CastItem } from '../../common.types';
 
-export function useCast(id: string) {
+export function useMovieCast(id: string) {
   const [castList, setCastList] = useState<CastItem[]>([]);
 
   useEffect(() => {
     async function fetchCastList() {
       try {
-        const response = await TVRepository.getCast(id);
+        const response = await MovieRepository.getCast(id);
         setCastList(response);
       } catch (error) {
-        console.error('Error occurred:', error);
+        // console.error('Error occurred:', error);
       }
     }
 

@@ -18,7 +18,7 @@ export const useTrendingMovies = (initialTimeWindow: TrendingTimeWindow) => {
         const response = await MovieListRepository.getTrending(timeWindow);
         setMoviesData(response);
       } catch (error) {
-        console.error('Error occurred:', error);
+        // console.error('Error occurred:', error);
       }
     }
 
