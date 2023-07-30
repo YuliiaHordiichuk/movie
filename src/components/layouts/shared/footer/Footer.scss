@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 20px 40px;
+  min-height: 200px;
+  background-color: $PrimaryColor;
+  &__logo {
+    display: block;
+    margin-right: 16px;
+    width: 130px;
+    height: 94px;
+  }
+}

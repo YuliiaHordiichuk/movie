@@ -1,0 +1,39 @@
+// main
+@import './styles/main/reset';
+@import './styles/main/global';
+@import './styles/main/vars';
+@import './styles/main/container';
+@import './styles/main/root';
+
+// ui
+@import './styles/ui/typography';
+@import './styles/ui/logo';
+
+// shared component styles
+@import './styles/components/page-aside';
+@import './styles/components/page-banner';
+
+// pages
+@import './pages/main-page/MainPage';
+@import './pages/error-page/ErrorPage';
+
+@import './domain/person/styles/PersonPage';
+@import './domain/movie/styles/MoviePage.scss';
+@import './domain/tv/styles/TVPage';
+
+// layout
+@import './components/layouts/shared/header/Header';
+@import './components/layouts/shared/footer/Footer';
+
+// blocks
+@import './components/blocks/search-banner/SearchBanner';
+@import './domain/movie/styles/MovieBanner.scss';
+@import './domain/tv/styles/TVBanner.scss';
+// ui components
+@import './components/ui/aside/AsideBlock';
+@import './components/ui/button/button-action/ButtonAction';
+@import './components/ui/button/button-switcher/ButtonSwitcher';
+@import './components/ui/card/Card';
+@import './components/ui/poster/Poster';
+@import './components/ui/scroll-list/ScrollList';
+@import './components/ui/preloader/Preloader';

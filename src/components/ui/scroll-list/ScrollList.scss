@@ -1,0 +1,40 @@
+.scroll-list {
+  &__list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: $Black;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 3px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      visibility: hidden;
+      border-radius: 5px;
+      background: $SecondaryColor;
+    }
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__header {
+    padding: 0 10px;
+    margin-bottom: 15px;
+    color: $PrimaryColor;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

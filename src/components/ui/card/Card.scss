@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  color: $PrimaryColor;
+  text-decoration: none;
+  cursor: pointer;
+  img,
+  .poster-stub {
+    display: block;
+    width: 150px;
+    height: 225px;
+    border-radius: 15px;
+  }
+}
+
+.card-rate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 180px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: $Black;
+  border-radius: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  color: $White;
+  box-shadow: 1px 1px 5px $PrimaryColor;
+}
